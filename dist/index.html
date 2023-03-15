@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repos Searching</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <a href="#">GitHub repos</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <div class="container">
+                <div class="content__column">
+                    <h1 class="content__title">Поиск репозиториев</h1>
+                    <div class="content__search search">
+                        <form class="search__form form-search" name="search">
+                            <div class="form-search__filters">
+                                <div class="form-search__group">
+                                    <label for="searchString" class="form-search__label">Подстрока поиска</label>
+                                    <input type="text" class="form-search__input" placeholder="Подстрока поиска (min: 4, max: 32)" 
+                                    id="searchString" name="searchString" required tabindex="1">
+                                </div>
+                                <div class="form-search__group">
+                                    <label for="searchQualifier" class="form-search__label">Фильтры поиска</label>
+                                    <select tabindex="2" name="searchQualifier" id="searchQualifier" class="form-search__select qualifier">
+                                        <option value="all" class="qualifier__option">По всему</option>
+                                        <option value="name" class="qualifier__option">По названию</option>
+                                        <option value="description" class="qualifier__option">По описанию</option>
+                                        <option value="topics" class="qualifier__option">По топикам</option>
+                                        <option value="readme" class="qualifier__option">По readme</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-search__group form-search__submit">
+                                <button type="submit" class="form-search__submit-button" tabindex="2">Поиск</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="content__repos repos">
+                        <ul class="repos__list">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <span>Created by <a href="https://github.com/damirios">damirios</a>, 2023</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
