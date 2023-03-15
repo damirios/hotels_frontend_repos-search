@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap');
 
 .wrapper {
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     background-color: #b9b0b2;
@@ -210,11 +210,122 @@
     
 }
 
+.no-repos-message {
+    text-align: center;
+    padding: 50px 0 0 0;
+    font-family: 'Montserrat';
+    font-size: 28px;
+    font-weight: 600;
+
+    & span {
+        font-style: italic;
+    }
+}
+
 .qualifier {
 
     // .qualifier__option
     &__option {
 
+    }
+}
+
+// REPOS ===========================================================================================================
+.repos {
+    padding: 10px 0;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+// REPO ============================================================================================================
+.repo {
+    padding: 10px 15px;
+    border: 2px solid #777;
+    background-color: rgb(43, 43, 43);
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    &__top-block {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 110px 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 10px;
+        margin-bottom: 25px;
+
+        font-family: 'Montserrat';
+        font-size: 22px;
+        line-height: 120%;
+        font-weight: 600;
+    }
+
+    &__avatar {
+        grid-area: 1 / 1 / 3 / 2;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%;
+    }
+
+    &__owner {
+        color: #fff;
+        & a {
+            text-decoration: none;
+            color: rgb(33, 154, 33);
+            transition: color 0.3s ease 0s;
+
+            &:hover {
+                text-decoration: underline;
+                color: rgb(27, 233, 27);
+            }
+        }
+    }
+
+    &__name {
+        color: #fff;
+
+        & a {
+            text-decoration: none;
+            color: rgb(33, 154, 33);
+            transition: color 0.3s ease 0s;
+
+            &:hover {
+                text-decoration: underline;
+                color: rgb(27, 233, 27);
+            }
+        }
+    }
+
+    &__middle-block {
+        font-family: 'Montserrat';
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 15px;
+    }
+
+    
+
+
+    &__bottom-block {
+        margin-top: auto;
+        font-family: 'Montserrat';
+        font-size: 18px;
+        line-height: 130%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__span {
+        color: rgb(33, 154, 33);
+    }
+
+    &__description-span {
+        color: rgb(241, 82, 33);
     }
 }
 
